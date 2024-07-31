@@ -8,16 +8,16 @@
 
 ### Overview
 
-This is an Ecommerce web application built with React. It features a variety of pages including landing, product, cart, checkout, signup, and login pages. The application ensures consistent design and functionality across different pages to provide a seamless shopping experience.
+This project is an e-commerce platform built with React. It allows users to browse products, add them to a cart, and proceed to checkout. The app uses various tools and libraries to provide a seamless and efficient user experience.
 
 ### Table of Contents
 
 - [Technologies](#technologies)
-- [Pages](#pages)
 - [Getting Started](#getting-started)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Testing](#testing)
+- [Pivotal Tracker](#pivotal-tracker)
 - [API Deployment](#api-deployment)
 - [Features](#features)
 - [License](#license)
@@ -27,55 +27,20 @@ This is an Ecommerce web application built with React. It features a variety of 
 ### Technologies
 
 - **React** - A JavaScript library for building user interfaces.
-- **Redux** - State management library.
-- **Styled Components** - Utilizes tagged template literals to style your components.
-- **Jest** - JavaScript testing framework.
-- **React Router** - For routing and navigation.
-
----
-
-### Pages
-
-#### Landing Page
-
-- **Product List**: Displays a list of different products.
-- **Recommended Products**: A slider showcasing recommended products.
-- **Signup Option**: Allows users to sign up.
-- **Menu**: Contains navigation options.
-
-#### Product Page
-
-- **Product List**: Shows a variety of products.
-- **Add to Cart**: Users can add products to their cart.
-
-#### Cart Page
-
-- **Add to Cart**: Users can add products to the cart.
-- **Suggested Products**: A slider showing suggested products.
-
-#### Checkout Page
-
-- **Checkout Items**: Users can review their items before checkout.
-- **Modify Cart**: Users can delete or increase the quantity of items before payment.
-
-#### Signup Page
-
-- **Sign Up**: Allows users to sign up or use third-party platforms like Google for signup.
-
-#### Login Page
-
-- **Log In**: Allows users to log in or use third-party platforms like Google for login.
+- **Redux or Context API** - For state management.
+- **Axios or Fetch API** - For API consumption.
+- **Firebase Auth** - For user authentication.
+- **React Router** - For handling routing in your application.
+- **Netlify or Vercel** - For deploying your app.
 
 ---
 
 ### Getting Started
 
 #### Prerequisites
-
 Ensure you have Node.js and npm installed on your computer by running `node -v` and `npm -v` in your terminal. If you don't have Node.js installed, go to the [Node.js website](https://nodejs.org/), and follow the download instructions.
 
 #### Installation
-
 1. **Clone the repository:**
    ```sh
    git clone https://github.com/DaisyMicheal/Ecommerce-web.git
@@ -90,7 +55,6 @@ Ensure you have Node.js and npm installed on your computer by running `node -v` 
    ```
 
 #### Usage
-
 1. **Run the development server:**
    ```sh
    npm start
@@ -108,6 +72,12 @@ Ensure you have Node.js and npm installed on your computer by running `node -v` 
    ```sh
    npm test
    ```
+
+---
+
+### Pivotal Tracker
+
+Track the project's progress on [Pivotal Tracker](https://www.pivotaltracker.com/n/projects/2710500).
 
 ---
 
