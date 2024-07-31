@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+### Ecommerce Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![Coverage Status](https://img.shields.io/badge/coverage-100%25-brightgreen) ![Maintainability](https://img.shields.io/badge/maintainability-A-brightgreen)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+### Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is an Ecommerce web application built with React. It features a variety of pages including landing, product, cart, checkout, signup, and login pages. The application ensures consistent design and functionality across different pages to provide a seamless shopping experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Table of Contents
 
-### `npm test`
+- [Technologies](#technologies)
+- [Pages](#pages)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Testing](#testing)
+- [API Deployment](#api-deployment)
+- [Features](#features)
+- [License](#license)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+### Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React** - A JavaScript library for building user interfaces.
+- **Redux** - State management library.
+- **Styled Components** - Utilizes tagged template literals to style your components.
+- **Jest** - JavaScript testing framework.
+- **React Router** - For routing and navigation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Pages
 
-### `npm run eject`
+#### Landing Page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Product List**: Displays a list of different products.
+- **Recommended Products**: A slider showcasing recommended products.
+- **Signup Option**: Allows users to sign up.
+- **Menu**: Contains navigation options.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Product Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Product List**: Shows a variety of products.
+- **Add to Cart**: Users can add products to their cart.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Cart Page
 
-## Learn More
+- **Add to Cart**: Users can add products to the cart.
+- **Suggested Products**: A slider showing suggested products.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Checkout Page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Checkout Items**: Users can review their items before checkout.
+- **Modify Cart**: Users can delete or increase the quantity of items before payment.
 
-### Code Splitting
+#### Signup Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Sign Up**: Allows users to sign up or use third-party platforms like Google for signup.
 
-### Analyzing the Bundle Size
+#### Login Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Log In**: Allows users to log in or use third-party platforms like Google for login.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Getting Started
 
-### Advanced Configuration
+#### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Ensure you have Node.js and npm installed on your computer by running `node -v` and `npm -v` in your terminal. If you don't have Node.js installed, go to the [Node.js website](https://nodejs.org/), and follow the download instructions.
 
-### Deployment
+#### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/DaisyMicheal/Ecommerce-web.git
+   ```
+2. **Navigate to the project directory:**
+   ```sh
+   cd ecommerce-web
+   ```
+3. **Install dependencies:**
+   ```sh
+   npm install
+   ```
 
-### `npm run build` fails to minify
+#### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Run the development server:**
+   ```sh
+   npm start
+   ```
+2. **Open your browser and navigate to:**
+   ```sh
+   http://localhost:3000
+   ```
+
+---
+
+### Testing
+
+1. **Run unit tests:**
+   ```sh
+   npm test
+   ```
+
+---
+
+### API Deployment
+
+The API endpoint is hosted [here](https://api.yourdomain.com).
+
+---
+
+### Features
+
+- **Reusable Components:** Modular components for easy integration.
+- **Customizable:** Flexible props to tailor components to your needs.
+- **Accessible:** Built with accessibility in mind.
+- **Tested:** Thoroughly tested components to ensure reliability.
+
+---
+
+### License
+
+This project is licensed under the MIT License.
+
+---
+
+### Additional Notes
+
+- **Ensure the components are accessible with proper focus management and ARIA attributes.**
+- **Test the components on various devices and screen sizes for responsiveness.**
+- **Review the styles to ensure they align with the overall design system.**
+
+For more information, check the documentation in each component's respective `.md` file.
