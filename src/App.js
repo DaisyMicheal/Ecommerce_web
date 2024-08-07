@@ -1,17 +1,8 @@
-import { Routes, Route } from 'react-router-dom'
-import { CartProvider } from './context/CartContext'
-import LandingPage from './Pages /Productpage'
-import GadgetStorePage from './Pages /itemsPages/GadgetStorePage'
-import AppliancesPage from './Pages /itemsPages/AppliancesPage'
-import ForHimPage from './Pages /itemsPages/ForHimPage'
-import HomePage from './Pages /itemsPages/HomePage'
-import ForHerPage from './Pages /itemsPages/ForHerPage'
-import BeautyPage from './Pages /itemsPages/BeautyPage'
-import CheckoutPage from './Pages /CheckoutPage'
-import ShopNow from './components/ShopNow'
+import React from 'react'
 
 function App() {
   return (
+
     <CartProvider>
       <Routes>
         <Route path='/' element={<LandingPage />} />
@@ -28,6 +19,7 @@ function App() {
         <Route path='/shopNow' element={<ShopNow />} />
       </Routes>
     </CartProvider>
+
   )
 }
 
