@@ -1,10 +1,14 @@
-import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import LoginPages from './pages/LoginPages'
 
-const App = () => {
+function App() {
   return (
-    <div className='app'>
-      <h1>Welcome to my react app </h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<LoginPages />} />
+      </Routes>
+    </Router>
   )
 }
+
 export default App
