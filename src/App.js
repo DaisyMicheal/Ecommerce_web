@@ -14,6 +14,8 @@ function App() {
   return (
     <CartProvider>
       <Routes>
+        <Route path='/' element={<LandingPage />} />
+
         <Route path='/landing' element={<LandingPage />} />
         <Route path='/gadget-store' element={<GadgetStorePage />} />
         <Route path='/appliances' element={<AppliancesPage />} />
