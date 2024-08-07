@@ -1,17 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
-import LoginPages from './pages/LoginPages'
-
+import React from 'react'
 
 function App() {
   return (
-    <Router>
-      <Routes>
-
-        <Route path='/' element={<LoginPages />} />
-      </Routes>
-    </Router>
-
+    <div>
+      <h1>Ecommerce web</h1>
+    </div>
   )
 }
 
