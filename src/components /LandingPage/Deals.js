@@ -1,10 +1,10 @@
 import React from 'react'
-import laptopstand from '../assets/recom2.jpg'
-import stand from '../assets/recom3.jpg'
-import speaker from '../assets/recom1.jpg'
-import phone from '../assets/phone1.jpg'
-import charger from '../assets/phone2.jpg'
-import boot from '../assets/recom4.jpg'
+import laptopstand from '../../assets/recom2.jpg'
+import stand from '../../assets/recom3.jpg'
+import speaker from '../../assets/recom1.jpg'
+import phone from '../../assets/phone1.jpg'
+import charger from '../../assets/phone2.jpg'
+import boot from '../../assets/recom4.jpg'
 
 const dealsData = [
   {

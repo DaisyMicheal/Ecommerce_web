@@ -6,9 +6,9 @@ import {
   faWallet,
 } from '@fortawesome/free-solid-svg-icons'
 
-import creditCard from '../assets/visa.svg'
-import moneyCheck from '../assets/mastercard.svg'
-import wallet from '../assets/paypal.svg'
+import creditCard from '../../assets/visa.svg'
+import moneyCheck from '../../assets/mastercard.svg'
+import wallet from '../../assets/paypal.svg'
 
 const Footer = () => {
   return (

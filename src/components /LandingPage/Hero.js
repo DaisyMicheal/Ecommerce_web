@@ -3,10 +3,10 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 // images
-import slider1 from '../assets/slider5.jpg'
-import slider2 from '../assets/slider1.jpg'
-import slider3 from '../assets/slider2.jpg'
-import slider4 from '../assets/slider4.jpg'
+import slider1 from '../../assets/slider5.jpg'
+import slider2 from '../../assets/slider1.jpg'
+import slider3 from '../../assets/slider2.jpg'
+import slider4 from '../../assets/slider4.jpg'
 
 const Hero = () => {
   const settings = {

@@ -9,12 +9,12 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 // Import images
-import deal1 from '../assets/deal1.jpg'
-import deal2 from '../assets/deal2.jpg'
-import deal3 from '../assets/deal3.jpg'
-import deal4 from '../assets/deal4.jpg'
-import deal5 from '../assets/deal5.jpg'
-import deal6 from '../assets/deal6.jpg'
+import deal1 from '../../assets/deal1.jpg'
+import deal2 from '../../assets/deal2.jpg'
+import deal3 from '../../assets/deal3.jpg'
+import deal4 from '../../assets/deal4.jpg'
+import deal5 from '../../assets/deal5.jpg'
+import deal6 from '../../assets/deal6.jpg'
 
 const Recommended = () => {
   const sliderRef = useRef(null)
