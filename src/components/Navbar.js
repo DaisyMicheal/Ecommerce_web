@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faSearch,
@@ -44,13 +46,14 @@ const Navbar = () => {
       <nav className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-16'>
           <div className='flex items-center justify-start w-1/4'>
-            <a
-              href='/'
-              className='text-xl font-bold text-orange-600'
-              style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
-            >
-              Shop
-            </a>
+            <Link to='/landing'>
+              <div
+                className='text-xl font-bold text-orange-600'
+                style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
+              >
+                Shop
+              </div>
+            </Link>
           </div>
           <div className='hidden md:flex md:items-center md:w-1/2 md:justify-center'>
             <ul
@@ -148,9 +151,13 @@ const Navbar = () => {
                 <FontAwesomeIcon icon={faSearch} size='lg' />
               </button>
             )}
-            <a href='/cart' className='text-orange-400 hover:text-orange-600'>
+            <Link
+              to='/checkout'
+              className='text-orange-400 hover:text-orange-600'
+            >
               <FontAwesomeIcon icon={faShoppingCart} size='lg' />
-            </a>
+            </Link>
+
             <a href='/user' className='text-sky-700 hover:text-sky-600'>
               <FontAwesomeIcon icon={faUser} size='lg' />
             </a>
