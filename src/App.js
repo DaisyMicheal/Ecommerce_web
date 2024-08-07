@@ -8,6 +8,7 @@ function App() {
         <Route path='/' element={<SignupPage />} />
       </Routes>
     </Router>
+
   )
 }
 
