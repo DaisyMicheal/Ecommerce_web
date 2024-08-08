@@ -19,16 +19,15 @@ import SeeAllPage from './pages/LandingPage/SeeAllPage'
 import OfficialStore from './pages/LandingPage/OfficialStore'
 function App() {
   return (
+
     <CartProvider>
       <Routes>
         <Route path='/' element={<LandingPage />} />
 
         <Route path='/landing' element={<LandingPage />} />
-
         <Route path='/product' element={<ProductPage />} />
         <Route path='/gadget-store' element={<GadgetStorePage />} />
         <Route path='/appliances' element={<AppliancesPage />} />
-
         <Route path='/for-him' element={<ForHimPage />} />
         <Route path='/home' element={<HomePage />} />
         <Route path='/for-her' element={<ForHerPage />} />
@@ -43,6 +42,7 @@ function App() {
       </Routes>
       <ToastContainer />
     </CartProvider>
+
   )
 }
 
