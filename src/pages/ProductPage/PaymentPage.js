@@ -1,9 +1,9 @@
-import React from 'react'
+import Payment from '../../components /ProductPage/payment'
 
 const PaymentPage = () => {
   return (
     <div>
-      <PaymentPage />
+      <Payment />
     </div>
   )
 }

@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
+import { toast } from 'react-toastify'
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -15,7 +16,7 @@ const SignUp = () => {
   })
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-  const navigate = useNavigate() // Use useNavigate for navigation
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -24,7 +25,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match')
+      toast.error('Passwords do not match')
       return
     }
     try {
@@ -33,20 +34,20 @@ const SignUp = () => {
         formData.email,
         formData.password
       )
-      alert('Signup successful')
+      toast.success('Signup successful')
       navigate('/payment')
     } catch (error) {
-      alert(error.message)
+      toast.error(error.message)
     }
   }
 
   const handleGoogleLogin = async () => {
     try {
       await signInWithPopup(auth, googleProvider)
-      alert('Login successful')
+      toast.success('Signup successful')
       navigate('/payment')
     } catch (error) {
-      alert(error.message)
+      toast.error(error.message)
     }
   }
 
@@ -120,23 +121,21 @@ const SignUp = () => {
             Sign up
           </button>
         </form>
-
         <div className='flex justify-center mt-4'>
           <button
             onClick={handleGoogleLogin}
-            type='submit'
             className='w-full py-2 bg-white border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition duration-200 flex items-center justify-center space-x-2'
           >
             <FontAwesomeIcon icon={faGoogle} className='text-[#4285F4]' />
             <span className='text-gray-700 hover:text-[#4285F4]'>
-              Sign in with Google
+              Sign up with Google
             </span>
           </button>
         </div>
         <div className='text-center mt-4'>
           <Link to='/login' className='text-orange-500 hover:underline'>
             Already have an account?{' '}
-            <span className='text-blue-400'> Log in</span>
+            <span className='text-blue-400'>Log in</span>
           </Link>
         </div>
       </div>

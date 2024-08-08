@@ -271,7 +271,10 @@ const HomeStore = () => {
         </div>
         <div className='relative'>
           <Link to='/checkout'>
-            <FontAwesomeIcon icon={faShoppingCart} className='text-2xl' />
+            <FontAwesomeIcon
+              icon={faShoppingCart}
+              className='text-2xl hover:text-orange-600'
+            />
             {cartItems.length > 0 && (
               <span className='absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-2 text-sm'>
                 {cartItems.reduce((total, item) => total + item.quantity, 0)}
@@ -300,7 +303,7 @@ const HomeStore = () => {
       <div className='flex-grow p-6 py-16'>
         <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6'>
           <h2 className='text-2xl font-bold mb-4 sm:mb-0'>
-            Beauty Deals
+            Home Deals
             <span className='text-lg text-gray-700'>
               ({filteredProducts.length} products found)
             </span>

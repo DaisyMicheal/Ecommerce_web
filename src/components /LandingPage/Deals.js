@@ -1,10 +1,10 @@
 import React from 'react'
-import laptopstand from '../../assets/recom2.jpg'
+import laptopstand from '../../assets/eledeal.jpg'
 import stand from '../../assets/recom3.jpg'
-import speaker from '../../assets/recom1.jpg'
+import speaker from '../../assets/gadget14.jpg'
 import phone from '../../assets/phone1.jpg'
-import charger from '../../assets/phone2.jpg'
-import boot from '../../assets/recom4.jpg'
+import charger from '../../assets/grocery.jpg'
+import boot from '../../assets/gadget12.jpg'
 
 const dealsData = [
   {
@@ -16,7 +16,7 @@ const dealsData = [
     image: stand,
   },
   {
-    title: 'Phone & Tablet Deals',
+    title: 'Gadgets',
     image: speaker,
   },
   {

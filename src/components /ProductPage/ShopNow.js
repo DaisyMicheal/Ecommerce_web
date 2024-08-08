@@ -38,6 +38,14 @@ import product13 from '../../assets/home13.jpg'
 import product14 from '../../assets/home14.jpg'
 import product15 from '../../assets/home15.jpg'
 import product16 from '../../assets/home16.jpg'
+import product17 from '../../assets/her10.jpg'
+import product18 from '../../assets/gadget10.jpg'
+import product19 from '../../assets/men10.jpg'
+import product20 from '../../assets/bg.jpg'
+import product21 from '../../assets/applaince2.jpg'
+import product22 from '../../assets/gadget12.jpg'
+import product23 from '../../assets/her12.jpg'
+import product24 from '../../assets/beauty7.jpg'
 
 const ItemsData = [
   {
@@ -255,6 +263,87 @@ const products = [
     rating: 5,
     freePickup: true,
   },
+  {
+    id: 17,
+    image: product17,
+    name: '7 Steps Laptop Stand Desktop Stand Can Be Adjusted',
+    price: 2866,
+    originalPrice: 3999,
+    discount: 31,
+    rating: 5,
+    freePickup: true,
+  },
+  {
+    id: 18,
+    image: product18,
+    name: '7 Steps Laptop Stand Desktop Stand Can Be Adjusted',
+    price: 2866,
+    originalPrice: 3999,
+    discount: 31,
+    rating: 5,
+    freePickup: true,
+  },
+
+  {
+    id: 19,
+    image: product19,
+    name: '7 Steps Laptop Stand Desktop Stand Can Be Adjusted',
+    price: 2866,
+    originalPrice: 3999,
+    discount: 31,
+    rating: 5,
+    freePickup: true,
+  },
+  {
+    id: 20,
+    image: product20,
+    name: '7 Steps Laptop Stand Desktop Stand Can Be Adjusted',
+    price: 2866,
+    originalPrice: 3999,
+    discount: 31,
+    rating: 5,
+    freePickup: true,
+  },
+  {
+    id: 21,
+    image: product21,
+    name: '7 Steps Laptop Stand Desktop Stand Can Be Adjusted',
+    price: 2866,
+    originalPrice: 3999,
+    discount: 31,
+    rating: 5,
+    freePickup: true,
+  },
+  {
+    id: 22,
+    image: product22,
+    name: '7 Steps Laptop Stand Desktop Stand Can Be Adjusted',
+    price: 2866,
+    originalPrice: 3999,
+    discount: 31,
+    rating: 5,
+    freePickup: true,
+  },
+  {
+    id: 23,
+    image: product23,
+    name: '7 Steps Laptop Stand Desktop Stand Can Be Adjusted',
+    price: 2866,
+    originalPrice: 3999,
+    discount: 31,
+    rating: 5,
+    freePickup: true,
+  },
+  {
+    id: 24,
+    image: product24,
+    name: '7 Steps Laptop Stand Desktop Stand Can Be Adjusted',
+    price: 2866,
+    originalPrice: 3999,
+    discount: 31,
+    rating: 5,
+    freePickup: true,
+  },
 ]
 
 const renderStars = (rating) => {
@@ -312,9 +401,12 @@ const ShopNow = () => {
         </div>
         <div className='relative'>
           <Link to='/checkout'>
-            <FontAwesomeIcon icon={faShoppingCart} className='text-2xl' />
+            <FontAwesomeIcon
+              icon={faShoppingCart}
+              className='text-2xl hover:text-orange-600'
+            />
             {cartItems.length > 0 && (
-              <span className='absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-2 text-sm'>
+              <span className='absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-2 text-sm '>
                 {cartItems.reduce((total, item) => total + item.quantity, 0)}
               </span>
             )}
@@ -343,7 +435,7 @@ const ShopNow = () => {
       <div className='flex-grow p-6 py-16'>
         <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6'>
           <h2 className='text-2xl font-bold mb-4 sm:mb-0'>
-            Beauty Deals
+            New Arrivals
             <span className='text-lg text-gray-700'>
               ({filteredProducts.length} products found)
             </span>

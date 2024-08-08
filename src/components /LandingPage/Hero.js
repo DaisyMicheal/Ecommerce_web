@@ -2,11 +2,13 @@ import React from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { Link } from 'react-router-dom'
+
 // images
 import slider1 from '../../assets/slider5.jpg'
-import slider2 from '../../assets/slider1.jpg'
-import slider3 from '../../assets/slider2.jpg'
-import slider4 from '../../assets/slider4.jpg'
+import slider2 from '../../assets/gadget15.jpg'
+import slider3 from '../../assets/her2.jpg'
+import slider4 from '../../assets/men1.jpg'
 
 const Hero = () => {
   const settings = {
@@ -51,12 +53,17 @@ const Hero = () => {
           Find the best deals on your favorite products
         </p>
         <div className='mt-12 flex space-x-4'>
-          <button className=' bg-white text-orange-500 font-bold py-2 px-6 rounded border-1 border-solid border-orange-600 shadow-lg rounded-md hover:bg-orange-600 hover:text-white'>
-            Explore more
-          </button>
-          <button className='bg-orange-600 font-bold text-black py-2 px-16 rounded hover:bg-orange-600 hover:text-white'>
-            Shop
-          </button>
+          <Link to='/officialStore'>
+            <button className=' bg-white text-orange-500 font-bold py-2 px-6 rounded border-1 border-solid border-orange-600 shadow-lg rounded-md hover:bg-orange-600 hover:text-white'>
+              Explore more
+            </button>
+          </Link>
+
+          <Link to='/shopNow'>
+            <button className='bg-orange-600 font-bold text-black py-2 px-16 rounded hover:bg-orange-600 hover:text-white'>
+              Shop
+            </button>
+          </Link>
         </div>
       </div>
       <Slider {...settings} className='relative z-0'>

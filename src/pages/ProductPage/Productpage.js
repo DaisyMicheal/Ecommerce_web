@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from '../../components /ProductPage/Navbar'
 import Header from '../../components /ProductPage/Header'
 import Items from '../../components /ProductPage/Items'
 import ProductSlider from '../../components /ProductPage/Product'
+import Navbar from '../../components /LandingPage/Navbar'
 
 const ProductPage = () => {
   return (

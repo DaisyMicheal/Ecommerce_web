@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-router-dom'
-
+import { Link, useNavigate } from 'react-router-dom'
 import {
   faSearch,
   faShoppingCart,
@@ -9,6 +8,8 @@ import {
   faBars,
   faCaretDown,
 } from '@fortawesome/free-solid-svg-icons'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,6 +18,8 @@ const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [scrollY, setScrollY] = useState(0)
   const [isNavbarFixed, setIsNavbarFixed] = useState(false)
+  const [cartItems, setCartItems] = useState([]) // State for cart items
+  const navigate = useNavigate() // Use useNavigate instead of useHistory
 
   const handleSearch = (e) => {
     e.preventDefault()
@@ -30,12 +33,28 @@ const Navbar = () => {
     setScrollY(currentScrollY)
   }
 
+  const handleLoginIconClick = () => {
+    if (cartItems.length === 0) {
+      toast.error('Please add items to the cart before logging in.')
+    } else {
+      toast.success('Logged in successfully.')
+      navigate('/login') // Navigate to the login page
+    }
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [scrollY])
+
+  useEffect(() => {
+    // Logic to fetch cart items from local storage or API can be placed here
+    // For demonstration, let's assume we fetch from localStorage
+    const storedCartItems = JSON.parse(localStorage.getItem('cartItems')) || []
+    setCartItems(storedCartItems)
+  }, [])
 
   return (
     <header
@@ -68,20 +87,20 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href='/categories'
+                <Link
+                  to='/shopNow'
                   className='text-gray-700 hover:text-orange-600 text-lg font-medium'
                 >
                   Categories
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href='/arrival'
+                <Link
+                  to='/landing'
                   className='text-gray-700 hover:text-orange-600 text-lg font-medium'
                 >
                   Arrival
-                </a>
+                </Link>
               </li>
               <li
                 className='relative'
@@ -101,20 +120,20 @@ const Navbar = () => {
                 {isDropdownOpen && (
                   <ul className='absolute bg-white shadow-md mt-2 rounded-md w-48'>
                     <li>
-                      <a
-                        href='/offers/discounts'
+                      <Link
+                        to='/shopNow'
                         className='block px-4 py-2 text-gray-700 hover:bg-orange-100'
                       >
                         Discounts
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href='/offers/new'
+                      <Link
+                        to='/officialStore'
                         className='block px-4 py-2 text-gray-700 hover:bg-orange-100'
                       >
                         New Arrivals
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 )}
@@ -156,9 +175,12 @@ const Navbar = () => {
             >
               <FontAwesomeIcon icon={faShoppingCart} size='lg' />
             </Link>
-            <a href='/user' className='text-sky-700 hover:text-sky-600'>
+            <button
+              onClick={handleLoginIconClick}
+              className='text-sky-700 hover:text-sky-600'
+            >
               <FontAwesomeIcon icon={faUser} size='lg' />
-            </a>
+            </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className='text-gray-700 hover:text-orange-600 md:hidden'
@@ -180,20 +202,21 @@ const Navbar = () => {
               </a>
             </li>
             <li className='group'>
-              <a
-                href='/categories'
+              <Link
+                to='/shopNow'
                 className='block text-orange-600 text-lg font-medium group-hover:border-2 group-hover:rounded-md group-hover:border-solid group-hover:border-orange-500 group-hover:bg-orange-500 group-hover:text-white px-10 py-1 transition-all duration-200'
               >
                 Categories
-              </a>
+              </Link>
             </li>
             <li className='group'>
-              <a
+              <Link
+                to='/landing'
                 href='/arrival'
                 className='block text-orange-600 text-lg font-medium group-hover:border-2 group-hover:rounded-md group-hover:border-solid group-hover:border-orange-500 group-hover:bg-orange-500 group-hover:text-white px-10 py-1 transition-all duration-200'
               >
                 Arrival
-              </a>
+              </Link>
             </li>
             <li className='group'>
               <button
@@ -207,22 +230,24 @@ const Navbar = () => {
                 />
               </button>
               {isDropdownOpen && (
-                <ul className='mt-2 w-full'>
+                <ul className='mt-2 bg-white shadow-md rounded-md w-48'>
                   <li>
-                    <a
+                    <Link
+                      to='/seeAll'
                       href='/offers/discounts'
                       className='block px-4 py-2 text-gray-700 hover:bg-orange-100'
                     >
                       Discounts
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
+                      to='/officialStore'
                       href='/offers/new'
                       className='block px-4 py-2 text-gray-700 hover:bg-orange-100'
                     >
                       New Arrivals
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               )}
@@ -230,6 +255,7 @@ const Navbar = () => {
           </ul>
         </div>
       )}
+      <ToastContainer />
     </header>
   )
 }

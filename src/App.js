@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { CartProvider } from './context/CartContext'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import ProductPage from './pages/ProductPage/Productpage'
 import GadgetStorePage from './pages/ProductPage/itemsPages/GadgetStorePage'
 import AppliancesPage from './pages/ProductPage/itemsPages/AppliancesPage'
@@ -13,6 +15,8 @@ import LandingPage from './pages/LandingPage/LandingPage'
 import SignupPage from './pages/SignupPage/SignupPage'
 import LoginPage from './pages/LoginPage/LoginPage'
 import PaymentPage from './pages/ProductPage/PaymentPage'
+import SeeAllPage from './pages/LandingPage/SeeAllPage'
+import OfficialStore from './pages/LandingPage/OfficialStore'
 function App() {
   return (
     <CartProvider>
@@ -31,10 +35,13 @@ function App() {
         <Route path='/beauty' element={<BeautyPage />} />
         <Route path='/checkout' element={<CheckoutPage />} />
         <Route path='/shopNow' element={<ShopNow />} />
+        <Route path='/seeAll' element={<SeeAllPage />} />
+        <Route path='/officialStore' element={<OfficialStore />} />
         <Route path='/signup' element={<SignupPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/payment' element={<PaymentPage />} />
       </Routes>
+      <ToastContainer />
     </CartProvider>
   )
 }

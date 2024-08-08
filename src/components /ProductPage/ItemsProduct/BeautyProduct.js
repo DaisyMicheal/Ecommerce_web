@@ -9,6 +9,19 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { CartContext } from '../../../context/CartContext'
 import { formatCurrency } from '../../../utils/utils'
+import beauty1 from '../../../assets/Beautyimg/conditioners.png'
+import beauty2 from '../../../assets/Beautyimg/Artboard.png'
+import beauty3 from '../../../assets/Beautyimg/beauty1.png'
+import beauty4 from '../../../assets/Beautyimg/CLENSE.png'
+import beauty5 from '../../../assets/Beautyimg/bathe-bathing.png'
+import beauty6 from '../../../assets/Beautyimg/trimming-clippers.png'
+import beauty7 from '../../../assets/Beautyimg/air-accesories.png'
+import beauty8 from '../../../assets/Beautyimg/trimming-clippers.png'
+import beauty9 from '../../../assets/Beautyimg/Sunscrean1.png'
+import beauty10 from '../../../assets/Beautyimg/Artboard_1_copy_17.png'
+import beauty11 from '../../../assets/Beautyimg/all-hair-care.png'
+import beauty12 from '../../../assets/Beautyimg/SKINCAREEN.png'
+
 import product1 from '../../../assets/beauty1.jpg'
 import product2 from '../../../assets/beauty2.jpg'
 import product3 from '../../../assets/beauty3.jpg'
@@ -25,6 +38,57 @@ import product13 from '../../../assets/beauty13.jpg'
 import product14 from '../../../assets/beauty14.jpg'
 import product15 from '../../../assets/beauty15.jpg'
 import product16 from '../../../assets/beauty16.jpg'
+
+const ItemsData = [
+  {
+    title: 'beauty1',
+    image: beauty1,
+  },
+  {
+    title: 'beauty2',
+    image: beauty2,
+  },
+  {
+    title: 'beauty3',
+    image: beauty3,
+  },
+  {
+    title: 'beauty4',
+    image: beauty4,
+  },
+  {
+    title: 'beauty5',
+    image: beauty5,
+  },
+  {
+    title: 'beauty6',
+    image: beauty6,
+  },
+  {
+    title: 'beauty7',
+    image: beauty7,
+  },
+  {
+    title: 'beauty8',
+    image: beauty8,
+  },
+  {
+    title: 'beauty9',
+    image: beauty9,
+  },
+  {
+    title: 'beauty10',
+    image: beauty10,
+  },
+  {
+    title: 'beauty11',
+    image: beauty11,
+  },
+  {
+    title: 'beauty12',
+    image: beauty12,
+  },
+]
 
 const products = [
   {
@@ -237,13 +301,31 @@ const BeautyStore = () => {
         </div>
         <div className='relative'>
           <Link to='/checkout'>
-            <FontAwesomeIcon icon={faShoppingCart} className='text-2xl' />
+            <FontAwesomeIcon
+              icon={faShoppingCart}
+              className='text-2xl hover:text-orange-600'
+            />
             {cartItems.length > 0 && (
               <span className='absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-2 text-sm'>
                 {cartItems.reduce((total, item) => total + item.quantity, 0)}
               </span>
             )}
           </Link>
+        </div>
+      </div>
+
+      {/* ForHerProduct*/}
+      <div className='py-12 bg-gray-100'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6'>
+            {ItemsData.map((deal, index) => (
+              <img
+                src={deal.image}
+                alt={deal.title}
+                className='w-full h-50 object-cover rounded-md transition-transform duration-300 transform group-hover:scale-105'
+              />
+            ))}
+          </div>
         </div>
       </div>
 

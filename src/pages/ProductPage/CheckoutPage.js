@@ -1,6 +1,6 @@
 import React from 'react'
 import Checkout from '../../components /ProductPage/Cheackout'
-import Navbar from '../../components /ProductPage/Navbar'
+import Navbar from '../../components /LandingPage/Navbar'
 const CheckoutPage = ({ cartItems }) => {
   return (
     <div>

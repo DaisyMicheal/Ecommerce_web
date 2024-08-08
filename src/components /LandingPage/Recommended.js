@@ -1,5 +1,7 @@
 import React, { useRef } from 'react'
 import Slider from 'react-slick'
+import { Link } from 'react-router-dom'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faChevronRight,
@@ -48,42 +50,42 @@ const Recommended = () => {
   const products = [
     {
       id: 1,
-      name: 'Blenders Pot',
+      name: 'Headset',
       price: '₦45,000',
       oldPrice: '₦70,000',
       image: deal1,
     },
     {
       id: 2,
-      name: 'Coffee Maker',
+      name: 'Toaster',
       price: '₦30,000',
       oldPrice: '₦50,000',
       image: deal4,
     },
     {
       id: 3,
-      name: 'Toaster',
+      name: 'Cat Headphone',
       price: '₦20,000',
       oldPrice: '₦35,000',
       image: deal2,
     },
     {
       id: 4,
-      name: 'Juicer',
+      name: 'Microwave',
       price: '₦25,000',
       oldPrice: '₦40,000',
       image: deal3,
     },
     {
       id: 5,
-      name: 'Juicer',
+      name: 'Infinix smart ',
       price: '₦25,000',
       oldPrice: '₦40,000',
       image: deal5,
     },
     {
       id: 6,
-      name: 'Juicer',
+      name: 'Redmin pro',
       price: '₦25,000',
       oldPrice: '₦40,000',
       image: deal6,
@@ -97,9 +99,13 @@ const Recommended = () => {
           <h2 className='text-4xl font-bold text-gray-800'>
             Recommended for you
           </h2>
-          <a href='/see-all' className='text-gray-700 hover:text-orange-600'>
+          <Link
+            to='/seeAll'
+            href='/see-all'
+            className='text-gray-700 hover:text-orange-600'
+          >
             See All &raquo;
-          </a>
+          </Link>
         </div>
         <Slider {...settings} ref={sliderRef} className='mt-8'>
           {products.map((product) => (
@@ -109,7 +115,7 @@ const Recommended = () => {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className='max-w-full max-h-full object-contain'
+                    className='max-w-full max-h-full object-contain 	'
                   />
                 </div>
                 <div className='p-4'>
