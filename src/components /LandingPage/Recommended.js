@@ -110,7 +110,7 @@ const Recommended = () => {
         <Slider {...settings} ref={sliderRef} className='mt-8'>
           {products.map((product) => (
             <div key={product.id} className='p-4'>
-              <div className='bg-white p-4 rounded-lg shadow-md hover:bg-gray-50'>
+              <div className='bg-white p-4 rounded-lg shadow-md '>
                 <div className='flex justify-center items-center h-48'>
                   <img
                     src={product.image}

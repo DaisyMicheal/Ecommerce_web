@@ -19,7 +19,7 @@ const Navbar = () => {
   const [scrollY, setScrollY] = useState(0)
   const [isNavbarFixed, setIsNavbarFixed] = useState(false)
   const [cartItems, setCartItems] = useState([]) // State for cart items
-  const navigate = useNavigate() // Use useNavigate instead of useHistory
+  const navigate = useNavigate() // Use useNavigate for navigation
 
   const handleSearch = (e) => {
     e.preventDefault()
@@ -37,7 +37,6 @@ const Navbar = () => {
     if (cartItems.length === 0) {
       toast.error('Please add items to the cart before logging in.')
     } else {
-      toast.success('Logged in successfully.')
       navigate('/login') // Navigate to the login page
     }
   }
@@ -51,7 +50,6 @@ const Navbar = () => {
 
   useEffect(() => {
     // Logic to fetch cart items from local storage or API can be placed here
-    // For demonstration, let's assume we fetch from localStorage
     const storedCartItems = JSON.parse(localStorage.getItem('cartItems')) || []
     setCartItems(storedCartItems)
   }, [])
@@ -212,7 +210,6 @@ const Navbar = () => {
             <li className='group'>
               <Link
                 to='/landing'
-                href='/arrival'
                 className='block text-orange-600 text-lg font-medium group-hover:border-2 group-hover:rounded-md group-hover:border-solid group-hover:border-orange-500 group-hover:bg-orange-500 group-hover:text-white px-10 py-1 transition-all duration-200'
               >
                 Arrival
@@ -234,7 +231,6 @@ const Navbar = () => {
                   <li>
                     <Link
                       to='/seeAll'
-                      href='/offers/discounts'
                       className='block px-4 py-2 text-gray-700 hover:bg-orange-100'
                     >
                       Discounts
@@ -243,7 +239,6 @@ const Navbar = () => {
                   <li>
                     <Link
                       to='/officialStore'
-                      href='/offers/new'
                       className='block px-4 py-2 text-gray-700 hover:bg-orange-100'
                     >
                       New Arrivals

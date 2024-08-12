@@ -106,7 +106,7 @@ const ProductSlider = () => {
     {
       id: 10,
       image: product10,
-      name: 'Nexus 55" Inches UHD 4K Android Smart Frameless TV (NX-TV55U4K621B (SA)) ',
+      name: 'Nexus 55" Inches UHD 4K Android Smart Frameless TV ',
       price: 415000,
       originalPrice: 425000,
       discount: 2,

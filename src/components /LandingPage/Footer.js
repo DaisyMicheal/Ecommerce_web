@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCreditCard,
@@ -33,14 +33,21 @@ const Footer = () => {
             <h3 className='text-lg font-bold text-gray-800'>Product</h3>
             <ul className='space-y-2'>
               <li>
-                <a href='#' className='text-gray-600 hover:text-gray-800'>
+                <Link
+                  to='/officialStore'
+                  className='text-gray-600 hover:text-gray-800'
+                >
                   All collection
-                </a>
+                </Link>
               </li>
+
               <li>
-                <a href='#' className='text-gray-600 hover:text-gray-800'>
+                <Link
+                  to='/shopNow'
+                  className='text-gray-600 hover:text-gray-800'
+                >
                   Discount
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -64,7 +64,7 @@ const products = [
   {
     id: 1,
     image: product1,
-    name: 'Zyre 2 Slice Sandwich Maker (EL-216) - Black',
+    name: 'Apple IPHONE 13 PRO (6.1INCH) 5G (6GB RAM, 128GB ROM)',
     price: 15800,
     originalPrice: 20000,
     discount: 21,
@@ -74,7 +74,7 @@ const products = [
   {
     id: 2,
     image: product2,
-    name: 'Binatone 1.5 Litres (BLG-403) Blender - Black',
+    name: 'Infinix Hot 40i 6.78" 4GB RAM/128GB ROM Android 13',
     price: 26768,
     originalPrice: 3999,
     discount: 28,
@@ -84,7 +84,7 @@ const products = [
   {
     id: 3,
     image: product3,
-    name: 'Nexus 1HP Split Air Conditioner ',
+    name: 'itel 2163 Wireless FM Torchlight Dual SIM',
     price: 315500,
     originalPrice: 4787,
     discount: 16,
@@ -102,7 +102,7 @@ const products = [
   {
     id: 5,
     image: product5,
-    name: 'Aeon 50x50 4 Burner Gas Cooker (AGC5040)',
+    name: 'Apple IPHONE 13 PRO (6.1INCH) 5G (6GB RAM, 128GB ROM)',
     price: 135232,
     originalPrice: 140000,
     discount: 3,
@@ -112,7 +112,7 @@ const products = [
   {
     id: 6,
     image: product6,
-    name: 'Syinix Swallow Maker- Fully Automatic',
+    name: 'TWS BudsAce Calls In Noise Out',
     price: 103550,
     originalPrice: 180000,
     discount: 42,
@@ -121,7 +121,7 @@ const products = [
   {
     id: 7,
     image: product7,
-    name: 'Polystar 20 Litres Manual Solo Microwave ',
+    name: 'P47 Wireless Bluetooth Headphones, FM Radio, Sd Card MP3 ',
     price: 94570,
     originalPrice: 104570,
     discount: 10,
@@ -130,7 +130,7 @@ const products = [
   {
     id: 8,
     image: product8,
-    name: 'Hisense 55" Inches UHD 4K SMART TV (55A6K)',
+    name: ' BoomPop Over-Ear Bluetooth Wireless Headphone',
     price: 499000,
     originalPrice: 3999,
     discount: 31,
