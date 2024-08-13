@@ -1,4 +1,3 @@
-// src/utils/tests/handleGoogleLogin.test.js
 import { handleGoogleLogin } from '../handleGoogleLogin'
 import { signInWithPopup, signOut } from 'firebase/auth'
 import { toast } from 'react-toastify'
