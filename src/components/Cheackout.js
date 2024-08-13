@@ -1,13 +1,12 @@
 import React, { useContext, useState } from 'react'
-import { CartContext } from '../../context/CartContext'
-import { Link } from 'react-router-dom'
+import { CartContext } from '../context/CartContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faTrash,
   faShoppingCart,
   faHeart,
 } from '@fortawesome/free-solid-svg-icons'
-import { formatCurrency, showNotification } from '../../utils/utils'
+import { formatCurrency, showNotification } from '../utils/utils'
 import SavedItems from './SavedItems'
 
 const Checkout = () => {
@@ -112,11 +111,9 @@ const Checkout = () => {
               <span>Subtotal</span>
               <span>{formatCurrency(totalAmount)}</span>
             </div>
-            <Link to='/signup'>
-              <button className='w-full py-2 bg-orange-500 text-white rounded'>
-                CHECKOUT ({formatCurrency(totalAmount)})
-              </button>
-            </Link>
+            <button className='w-full py-2 bg-orange-500 text-white rounded'>
+              CHECKOUT ({formatCurrency(totalAmount)})
+            </button>
           </div>
         </>
       ) : (

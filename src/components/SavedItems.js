@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import { CartContext } from '../../context/CartContext'
+import { CartContext } from '../context/CartContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash, faHeart } from '@fortawesome/free-solid-svg-icons'
-import { formatCurrency } from '../../utils/utils'
+import { formatCurrency } from '../utils/utils'
 
 const SavedItems = () => {
   const { savedItems, removeFromSavedItems, moveToCart } =
