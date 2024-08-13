@@ -1,17 +1,19 @@
 import { Routes, Route } from 'react-router-dom'
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-import LoginPage from './pages/AuthForm/LoginPage/LoginPage'
+
+import { CartProvider } from './context/CartContext'
+
+import CheckoutPage from './Pages /CheckoutPage'
+
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<LoginPage />} />
-        <Route path='/login' element={<LoginPage />} />
+        <Route path='/' element={<CheckoutPage />} />
+
+        <Route path='/checkout' element={<CheckoutPage />} />
       </Routes>
-      <ToastContainer />
-    </>
+    </CartProvider>
 
   )
 }
